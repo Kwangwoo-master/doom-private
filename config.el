@@ -1,5 +1,5 @@
-(setq user-full-name "JJ Kim"
-      user-mail-address "jj@haedosa.xyz")
+(setq user-full-name "KW Kim"
+      user-mail-address "kw@haedosa.xyz")
 
 (setq default-input-method "korean-hangul3f")
 
@@ -18,7 +18,8 @@
   (backup-buffer))
 (add-hook 'before-save-hook  'force-backup-of-buffer)
 
-(setq doom-theme 'doom-one)
+;(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-dracula)
 
 (use-package! face-remap
   :custom-face
