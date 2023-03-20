@@ -1,7 +1,7 @@
 (setq user-full-name "KW Kim"
       user-mail-address "kw@haedosa.xyz")
 
-(setq default-input-method "korean-hangul3f")
+(setq default-input-method "korean-hangul")
 
 (setq-default backup-directory-alist '(("" . "~/.backup"))
               make-backup-files t
@@ -18,7 +18,6 @@
   (backup-buffer))
 (add-hook 'before-save-hook  'force-backup-of-buffer)
 
-;(setq doom-theme 'doom-one)
 (setq doom-theme 'doom-dracula)
 
 (use-package! face-remap
@@ -105,7 +104,8 @@
                            (set-tab-width)
                            (set-lsp-ui-doc-size)
                            (lsp-ui-mode)
-                           (lsp-ui-doc-mode)))))
+                           (lsp-ui-doc-mode)
+                           (setq lsp-haskell-formatting-provider "fourmolu")))))
 
 ;; add to $DOOMDIR/config.el
 (after! lsp-mode
